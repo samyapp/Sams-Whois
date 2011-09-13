@@ -1,0 +1,273 @@
+/*
+	Sams Whois Configuration File.
+
+	This file contains details on whois servers and which tlds use them.
+	You can edit this file to add or remove whois servers and tlds from the
+	script.
+
+	1) The servers list
+
+	Each whois server appears on a single line, with configuration info separated by a |
+	The fields are: whois server, available match, match for authoratitive server, text to clean, fields to hilight.
+
+	The whois server field can also contain extra text to submit to the server before the domain.
+	For example, specifiying "domain " before the domain name for whois.crsnic.net ensures that the result
+	for that specific domain is returned. Separate this value from the server name with a #
+
+	The available match just contains some text to search for that determines that the domain is available.
+
+	The auth. server match is used for tlds like com & net to indicate the position in the whois result where
+	the name of the authoratitive server to use is.
+
+	The cleanup text is a string to match with the whois data for cleaning the result. It should be preceeded by
+	either a > or a <. If a > is used, then this string and all text after it will be removed. If a < is used,
+	then this string and all text before it will be removed from the result (if cleaning is turned on).
+
+	The fields to hilight section contains a list of strings which match the beginning of lines in the whois
+	output to hilight. Separate each of these with a #.
+
+	2) The tlds list
+
+	The tlds list matches each tld to the whois server to use to look it up, in the form tld=server
+
+	3) The default hilight list.
+
+	The line after this comment, defaulthilight=... contains a list of strings to use for the hilighting for any
+	server which doesn't have hilighting set already.
+*/
+defaulthilight=Registrant Contact:#Technical Contact:#Billing Contact:#Administrative Contact:#Status:#Name Server:#Expiration date:#Tech Contact:#Admin Contact:#Registrant:#Registrant Contact Name:#Registrant Contact Email:#Admin Contact Name:#Admin Contact Email:#Domain Server#Created#Expires
+[servers]
+whois.crsnic.net#domain |No match for |Whois Server:|>NOTICE: The expiration date |Registrar:#Status:#Expiration Date:
+whois.afilias.net|NOT FOUND||<you agree to abide by this policy.|Expiration Date:#Status:#Registrant Email:#Admin Name:#Billing Name:#Billing Email#Tech Name:#Tech Email:#Registrant Name:#Admin Email:#Name Server:
+whois.nic.us|Not found:||>NeuStar, Inc., the Registry Administrator|Domain Expiration Date:#Domain Status:#Sponsoring Registrar:#Registrant Name:#Registrant Email:#Administrative Contact Name:#Administrative Contact Email:#Billing Contact Name:#Billing Contact Email:#Technical Contact Name:#Technical Contact Email:#Name Server:
+whois.internic.net|No match for |Whois Server:
+whois.publicinterestregistry.net|NOT FOUND||<you agree to abide by this policy.|Expiration Date:#Status:#Name Server:#Registrant Name:#Registrant Email:#Admin Name:#Admin Email:#Tech Name:#Tech Email:#Billing Name:#Billing Email:
+whois.neulevel.biz|Not found:||>NeuLevel, Inc., the Registry|Domain Expiration Date:#Domain Status:#Sponsoring Registrar:#Registrant Name:#Registrant Email:#Administrative Contact Name:#Administrative Contact Email:#Billing Contact Name:#Billing Contact Email:#Technical Contact Name:#Technical Contact Email:#Name Server:
+whois.nic.uk|No match for|||Registration Status:#Registrant:#Registrant's Address:#Renewal Date:#Name servers
+rs.domainbank.net|||<of the foregoing policies.|Administrative Contact:#Record expires on #Technical Contact:#Registrant:#Zone Contact:#Domain servers in 
+whois.moniker.com|||<you agree to abide by this policy.|Administrative Contact:#Registrant:#Domain Servers#Billing Contact:#Technical Contact:#Domain Expires on
+whois.networksolutions.com|||<right to modify these terms at any time.|Registrant:#Administrative Contact:#Record expires on #Domain servers in listed order:
+whois.enom.com|||>The data in this whois database |Registrant Contact:#Technical Contact:#Billing Contact:#Administrative Contact:#Status:#Name Servers:#Expiration date:
+whois.opensrs.net|||>The Data in the Tucows Registrar|Registrant:#Administrative Contact:#Technical Contact:#Record expires on#Domain servers in listed order:
+whois.godaddy.com|||<domain names listed in this database.|Registrant:#Expires On:#Administrative Contact:#Technical Contact:#Domain servers in listed order:
+whois.aunic.net|No Data Found|||Status:#Registrant Contact Name:#Registrant Email:#Name Server:#Tech Name:#Tech Email:
+whois.denic.de|free
+whois.worldsite.ws|No match for|||Registrant:#Name Servers:
+whois.nic.tv|
+whois.nic.tm|No match for
+whois.cira.ca|AVAIL
+whois.nic.cc|No match|Whois Server:|>The Data in eNIC Corporation|Whois Server:#Updated:
+whois.domainzoo.com|||<you agree to abide by these terms.
+whois.domaindiscover.com|||<you agree to abide by this policy.
+whois.markmonitor.com|||<you agree to abide by this policy.
+whois2.afilias-grs.net|NOT FOUND||<abide by this policy.
+whois.dotmobiregistry.net|NOT FOUND||<integrity of the database.
+whois.registry.pro|Unknown domain||<All rights reserved.  RegistryPro.
+whois.inregistry.net|NOT FOUND||
+tvwhois.verisign-grs.com|No match for||
+whois.nic.travel|Not found:||
+whois.nic.name|No match||
+whois.ripn.net|No entries found||
+whois.aero|NOT FOUND||
+whois.nic.asia|NOT FOUND||
+whois.nic.at|nothing found||
+whois.dns.be|Status:      FREE||
+whois.cnnic.cn|no matching record
+whois.eu|Status:	AVAILABLE
+whois.nic.fr|No entries found in the AFNIC Database
+whois.domainregistry.ie|Not Registered
+whois.nic.it|Status: AVAILABLE
+whois.nic.li|We do not have an entry
+whois.nic.tel|Not found:
+whois.nic.me|Not found
+whois.norid.no|no matches
+whois.nic.nu|NO MATCH for domain
+whois.iis.se|not found.
+whois.rotld.ro|No entries found
+whois.domain-registry.nl|is free
+whois.srs.net.nz|220 Available
+whois.nic.mx|Object_Not_Found
+[/servers]
+[tlds]
+com=whois.crsnic.net
+net=whois.crsnic.net
+org=whois.publicinterestregistry.net
+info=whois.afilias.net
+biz=whois.neulevel.biz
+us=whois.nic.us
+co.uk=whois.nic.uk
+org.uk=whois.nic.uk
+ca=whois.cira.ca
+tel=whois.nic.tel
+ie=whois.domainregistry.ie
+it=whois.nic.it
+li=whois.nic.li
+no=whois.norid.no
+cc=whois.nic.cc
+eu=whois.eu
+nu=whois.nic.nu
+com.au=whois.aunic.net
+net.au=whois.aunic.net
+org.au=whois.aunic.net
+de=whois.denic.de
+ws=whois.worldsite.ws
+sc=whois2.afilias-grs.net
+mobi=whois.dotmobiregistry.net
+pro=whois.registry.pro
+edu=whois.crsnic.net
+tv=tvwhois.verisign-grs.com
+travel=whois.nic.travel
+name=whois.nic.name
+in=whois.inregistry.net
+co.in=whois.inregistry.net
+net.in=whois.inregistry.net
+org.in=whois.inregistry.net
+me=whois.nic.me
+at=whois.nic.at
+be=whois.dns.be
+cn=whois.cnnic.cn
+asia=whois.nic.asia
+ru=whois.ripn.net
+ltd.uk=whois.nic.uk
+ab.ca=whois.cira.ca
+bc.ca=whois.cira.ca
+mb.ca=whois.cira.ca
+nb.ca=whois.cira.ca
+nf.ca=whois.cira.ca
+nl.ca=whois.cira.ca
+ns.ca=whois.cira.ca
+nt.ca=whois.cira.ca
+nu.ca=whois.cira.ca
+on.ca=whois.cira.ca
+pe.ca=whois.cira.ca
+qc.ca=whois.cira.ca
+sk.ca=whois.cira.ca
+yk.ca=whois.cira.ca
+aaa.pro=whois.registry.pro
+aca.pro=whois.registry.pro
+acct.pro=whois.registry.pro
+arc.pro=whois.registry.pro
+avocat.pro=whois.registry.pro
+bar.pro=whois.registry.pro
+bus.pro=whois.registry.pro
+cfp.pro=whois.registry.pro
+chi.pro=whois.registry.pro
+chiro.pro=whois.registry.pro
+cpa.pro=whois.registry.pro
+dds.pro=whois.registry.pro
+den.pro=whois.registry.pro
+dent.pro=whois.registry.pro
+ed.pro=whois.registry.pro
+eng.pro=whois.registry.pro
+jur.pro=whois.registry.pro
+law.pro=whois.registry.pro
+med.pro=whois.registry.pro
+min.pro=whois.registry.pro
+ntr.pro=whois.registry.pro
+nur.pro=whois.registry.pro
+nurse.pro=whois.registry.pro
+opt.pro=whois.registry.pro
+pa.pro=whois.registry.pro
+pha.pro=whois.registry.pro
+pharma.pro=whois.registry.pro
+pod.pro=whois.registry.pro
+pr.pro=whois.registry.pro
+prof.pro=whois.registry.pro
+prx.pro=whois.registry.pro
+psy.pro=whois.registry.pro
+pt.pro=whois.registry.pro
+recht.pro=whois.registry.pro
+rel.pro=whois.registry.pro
+teach.pro=whois.registry.pro
+vet.pro=whois.registry.pro
+ro=whois.rotld.ro
+arts.ro=whois.rotld.ro
+co.ro=whois.rotld.ro
+com.ro=whois.rotld.ro
+firm.ro=whois.rotld.ro
+info.ro=whois.rotld.ro
+nom.ro=whois.rotld.ro
+nt.ro=whois.rotld.ro
+org.ro=whois.rotld.ro
+rec.ro=whois.rotld.ro
+ro.ro=whois.rotld.ro
+store.ro=whois.rotld.ro
+tm.ro=whois.rotld.ro
+www.ro=whois.rotld.ro
+firm.in=whois.inregistry.net
+gen.in=whois.inregistry.net
+ind.in=whois.inregistry.net
+com.ru=whois.ripn.net
+int.ru=whois.ripn.net
+net.ru=whois.ripn.net
+org.ru=whois.ripn.net
+pp.ru=whois.ripn.net
+aero=whois.aero
+co.at=whois.nic.at
+or.at=whois.nic.at
+ah.cn=whois.cnnic.cn
+bj.cn=whois.cnnic.cn
+com.cn=whois.cnnic.cn
+cq.cn=whois.cnnic.cn
+fj.cn=whois.cnnic.cn
+gd.cn=whois.cnnic.cn
+gs.cn=whois.cnnic.cn
+gx.cn=whois.cnnic.cn
+gz.cn=whois.cnnic.cn
+ha.cn=whois.cnnic.cn
+hb.cn=whois.cnnic.cn
+he.cn=whois.cnnic.cn
+hi.cn=whois.cnnic.cn
+hk.cn=whois.cnnic.cn
+hl.cn=whois.cnnic.cn
+hn.cn=whois.cnnic.cn
+jl.cn=whois.cnnic.cn
+js.cn=whois.cnnic.cn
+jx.cn=whois.cnnic.cn
+ln.cn=whois.cnnic.cn
+mo.cn=whois.cnnic.cn
+net.cn=whois.cnnic.cn
+nm.cn=whois.cnnic.cn
+nx.cn=whois.cnnic.cn
+org.cn=whois.cnnic.cn
+qh.cn=whois.cnnic.cn
+sc.cn=whois.cnnic.cn
+sd.cn=whois.cnnic.cn
+sh.cn=whois.cnnic.cn
+sn.cn=whois.cnnic.cn
+sx.cn=whois.cnnic.cn
+tj.cn=whois.cnnic.cn
+tw.cn=whois.cnnic.cn
+xj.cn=whois.cnnic.cn
+fr=whois.nic.fr
+asso.fr=whois.nic.fr
+com.fr=whois.nic.fr
+gouv.fr=whois.nic.fr
+nom.fr=whois.nic.fr
+tm.fr=whois.nic.fr
+se=whois.iis.se
+org.se=whois.iis.se
+pp.se=whois.iis.se
+tm.se=whois.iis.se
+nl=whois.domain-registry.nl
+nz=whois.srs.net.nz
+ac.nz=whois.srs.net.nz
+co.nz=whois.srs.net.nz
+cri.nz=whois.srs.net.nz
+geek.nz=whois.srs.net.nz
+gen.nz=whois.srs.net.nz
+govt.nz=whois.srs.net.nz
+iwi.nz=whois.srs.net.nz
+maori.nz=whois.srs.net.nz
+mil.nz=whois.srs.net.nz
+net.nz=whois.srs.net.nz
+org.nz=whois.srs.net.nz
+parliament.nz=whois.srs.net.nz
+school.nz=whois.srs.net.nz
+mx=whois.nic.mx
+com.mx=whois.nic.mx
+edu.mx=whois.nic.mx
+gob.mx=whois.nic.mx
+net.mx=whois.nic.mx
+org.mx=whois.nic.mx
+[/tlds]

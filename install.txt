@@ -1,0 +1,39 @@
+Follow the instructions below to get a functioning whois-lookup service on your website in a couple of minutes.
+
+Download the files (in .zip format) from the downloads page.
+If you're reading this, then you've probably already done that.
+
+You will need winzip or an equivalent program to unpack the archive. 
+Unzip the files on your computer. Now.
+
+This should create a folder "samswhoisdistribution" containing a few other files and the samswhois folder.
+
+Read the file "license.txt" and make sure you agree with everything in it. Please :)
+
+Upload the files in "samswhoisdistribution" to the document root of your web server
+(the folder accessed by http://www.yoursite.com/). 
+*NOTE* - don't upload the "samswhoisdistribution" folder itself. Just the files and folder inside it.
+
+You also don't need to upload the "license.txt" and "install.txt" (this one) files. No real harm if you do though.
+
+If you want to use the caching options, set the permissions on the "/samswhois/cache" folder (on your server) 
+so that the script can create files in it. 
+
+Point your web browser to http://www.yoursite.com/whois-example.php 
+
+Congratulations! You should now have a fully functioning whois-lookup on your website.
+
+To customize it to your website's look and feel, modify the whois-example.php file with your own html.
+
+You can quickly alter the design of the form and results by editing the css styles in the file swstyles.css.
+
+The whois-example.php file contains a lot of comments describing how to set various options in the script.
+
+For further information, see the online docs at http://www.phpace.com/scripts/sams-whois/ for general usage, 
+editing the css styles, and using the SamsWhois class directly.
+
+Any problems? Submit them at http://www.phpace.com/scripts/sams-whois/
+
+Thanks for using Sams Whois!
+
+Cheers, Sam Yapp

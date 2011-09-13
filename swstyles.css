@@ -1,0 +1,116 @@
+/*
+
+	css styles for samswhois.inc.php
+Copyright (c) 2004, 2008 Sam Yapp
+http://www.phpace.com/scripts/sams-whois
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+*/
+
+/* <div> around all html output by the script */
+.swPositioner{
+	text-align: center;
+	width: 100%;
+}
+
+/* <div> around the whois lookup form */
+.swForm{
+	text-align: center;
+}
+
+/* <div> heading above the whois form */
+.swHeading{
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/* <input> for entering the domain in */
+.swDomain{
+	width: 100px;
+	text-align: right;
+}
+
+/* <select> listing tlds */
+.swTld{
+}
+
+/* <input type="submit"> lookup form submit button */
+.swSubmit{
+	border: 1px solid black;
+	background-color: #6699cc;
+}
+
+/* security code <img> tag */
+.swSecureImage{
+	border: 1px solid black;
+}
+
+/* <input> for entering the security code */
+.swSecureCode{
+	width: 60px;
+}
+
+/* <div> containing instructions, etc */
+.swInfo{
+	font-size: 10px;
+	color: #aaaaaa;
+	padding: 5px;
+	text-align: center;
+}
+
+/* <div> containing all whois lookup results */
+.swResults{
+	text-align: center;
+}
+
+/* <div> containing the domain status message (available, registered) */
+.swStatus{
+	border-top: 2px dotted #cccccc;
+	padding: 5px;
+	text-align: center;
+	width: 500px;
+}
+
+/* <div> containing details of the whois server used for the lookup */
+.swServer{
+	border-top: 2px dotted #cccccc;
+	text-align: center;
+	padding: 10px;
+	color: #aaaaaa;
+}
+
+/* <div containing the data from the whois lookup */
+.swData{
+	padding: 4px;
+	color: #666666;
+}
+
+/* style for <span> around lines in the output to hilight. */
+.swHilight{
+	font-weight: bold;
+	color: #ff0000;
+}
+
+/* <div> used to display error messages */
+.swError{
+	font-weight: bold;
+	color: red;
+}
