@@ -1,0 +1,20 @@
+Sam’s Whois is a free php class with supporting scripts which make adding a
+domain name whois lookup to your website incredibly simple. The scripts
+were written by me, Sam, hence the name. Imaginative, huh?
+
+Website for more info and documentation: http://www.phpace.com/scripts/sams-whois/
+
+Main Features
+
+    * All major tlds supported (including com, net, org, info, biz, us, co.uk, org.uk, etc)... *this may be slightly out of date now...
+    * Optionally automatically redirect a query to the authoritative whois server for a tld where appropriate (.com and .net).
+    * CSS-based design for easy integration with your existing website design.
+    * Free to use (see the licence page for full details)
+    * Can cache whois lookup results for a specified amount of time, reducing bandwidth and system usage.
+    * Optionally require users to enter a randomly generated code, displayed as an image, for each lookup to stop people using scripts to abuse the system.
+    * Comes with a detailed and heavily commented example script fully illustrating usage.
+    * Easy installation – Basic version requires only 1 line of code. View the quickstart guide here.
+    * Optionally clean whois data of extraneous text (for some tlds).
+    * Easily limit which tlds are supported with one line of code.
+    * Optionally hilight main fields in the whois data for extra clarity.
+
